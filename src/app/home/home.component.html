@@ -1,6 +1,5 @@
 <p>this is home module</p>
 <p>toi la {{ name }}</p>
-<input value="{{name}}">
-<!-- cau lenh if trong angular-->
-<h1 *ngIf="age > 18">Ban qua gia roi</h1>
-<h1 *ngIf="age <= 18">Ban con qua tre</h1>
+<!--khi dien thong tin vao form ca gia tri name deu thay doi gia tri theo-->
+<input type="text" [(ngModel)]="name">
+<button (click)="resetName()">reset ten</button>

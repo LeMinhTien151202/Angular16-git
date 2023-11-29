@@ -1,9 +1,5 @@
 <p>this is home modulek</p>
-<input type="text" [(ngModel)]="age">
-<p>tuoi la {{ age }}</p>
-<!-- cau lenh if trong angular-->
-<!-- <h1 *ngIf="age > 18">Ban qua gia roi</h1>
-<h1 *ngIf="age <= 18">Ban con qua tre</h1> -->
-<div *ngIf="age <= 18; then tre; else gia"></div>
-<ng-template #tre><h1>Ban con qua tre</h1></ng-template>
-<ng-template #gia><h1>Ban qua gia roi</h1></ng-template>
+<h1>Trai Cay</h1>
+<ul *ngFor="let trai of fruit; let i = index">
+    <li>{{i + 1}} . {{trai}}</li>
+</ul>

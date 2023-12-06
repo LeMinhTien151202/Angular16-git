@@ -1,5 +1,20 @@
 <p>this is home modulek</p>
 <h1>Trai Cay</h1>
-<ul *ngFor="let trai of fruit; let i = index">
-    <li>{{i + 1}} . {{trai}}</li>
-</ul>
+
+<table>
+    <tr>
+      <th>thu tu</th>
+      <th>ten</th>
+      <th>gia</th>
+      <th>Dai ha gia</th>
+    </tr>
+    <tr *ngFor="let trai of fruit2; let i = index">
+      <td>{{ i + 1 }}</td>
+      <td>{{ trai.fruit }}</td>
+      <td>
+        <span [ngClass]="{'soam': trai.gia < 0}">{{ trai.gia }}</span>
+      </td>
+      <td *ngIf="trai.haGia">dang ha gia!</td>
+    </tr>
+    
+  </table>
